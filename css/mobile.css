@@ -1,0 +1,72 @@
+@media screen and (max-width: 851px) {
+
+
+    header {
+        padding-bottom: 50px;
+    }
+
+    
+    .nav-mobile {
+        display: flex;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .header-banner {
+        padding-top: 50px;
+    }
+
+    .header-banner-content {
+        width: 100%;
+    }
+
+    /* Headers section starts here */
+
+
+
+    .contain {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 0px;
+        flex-direction: column;
+    }
+
+    .contain .text {
+        width: 100%;
+    }
+
+
+
+    .about .flex {
+        flex-direction: column;
+    }
+
+    .about .flex .flex-box {
+        width: 100%;
+    }
+
+    .package .pack .pack-flex h1 {
+        font-size: 25px;
+    }
+
+    .package .pack .pack-flex button {
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+
+    footer .foot {
+        flex-direction: column;
+    }
+
+    footer .foot .foot-flex {
+        padding: 10px 0px;
+    }
+
+    footer .foot .foot-flex h2 {
+        text-align: center;
+    }
+
+    
+}

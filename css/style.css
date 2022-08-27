@@ -1,0 +1,379 @@
+/* General Styling begins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+
+
+/* reusables starts here */
+span a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+
+/* reusables ends here */
+
+
+
+header {
+    background: var(--gradient), url(../assets/imgs/header.jpg);
+    background-position: center;
+    padding-bottom: 169px;
+}
+
+
+
+.backdrop {
+    background: yellow;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* =============== */
+.nav-mobile {
+    display: none;
+    /* position: fixed; */
+    background: var(--main-color);
+    justify-content: space-between;
+    padding: 20px 30px 20px 15px;
+    align-items: center;
+}
+
+.nav-mobile__brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-mobile__brand span {
+    color: var(--white-color);
+    margin-left: 10px;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.hamburger-menu {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.menubars {
+    height: 3px;
+    background: var(--white-color);
+    width: 100%;
+    position: relative;
+}
+
+.menubars::before,
+.menubars::after {
+    content: '';
+    background: var(--white-color);
+    position: absolute;
+    width: 100%;
+    height: 3px;
+}
+
+.menubars::before {
+    transform: translateY(-10px);
+}
+
+.menubars::after {
+    transform: translateY(10px);
+}
+
+.show .menubars {
+    background: transparent;
+}
+
+.show .menubars::before {
+    transform: rotate(45deg);
+    background: var(--main-color);
+
+}
+
+.show .menubars::after {
+    transform: rotate(-45deg);
+    background: var(--main-color);
+
+}
+
+.mobile__link-holder {
+    display: none;
+    width: 100%;
+    /* height: 250px; */
+    position: fixed;
+    background: var(--main-color);
+    right: 0;
+    top: 0;
+    /* padding-left: 15px; */
+}
+
+.showlinks {
+    display: block;
+}
+
+.mobile__link-holder li {
+    list-style: none;
+}
+
+.mobile__header-links {
+    display: block;
+    padding: 20px 0px 20px 40px;
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.mobile__header-links:hover,
+.mobile__header-links:focus {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+
+.active-link {
+    background: var(--white-color);
+    color: var(--main-color);
+}
+
+/* =============== */
+.nav-desktop {
+    padding-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    color: var(--white-color);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.link-holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-holder ul {
+    display: flex;
+}
+
+.link-holder li {
+    list-style: none;
+    color: var(--white-color);
+}
+
+.header-links {
+    display: block;
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header-links:hover {
+    color: var(--main-color);
+}
+
+/* nav section ends here */
+
+
+
+/* Hero starts */
+.contain {
+    padding-top: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contain .text {
+    width: 48%;
+}
+
+.contain .text .explore {
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 30px 0px;
+}
+
+.contain .text .lorem {
+    color: var(--white-color);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.contain .text .btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+    border-radius: 50px;
+    animation: bouncingbutton 3s infinite alternate;
+}
+
+.contain .text .btn:hover {
+    background: white;
+    color: var(--main-color);
+}
+
+/* Hero Section ends here */
+
+
+
+/* About starts */
+.about {
+    padding: 50px 0px;
+}
+
+.about .flex {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .flex .flex-box {
+    width: 31%;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding: 30px;
+    border: 1px solid var(--main-color);
+    margin: 20px 0px;
+    /* height: 250px; */
+    border-radius: 20px;
+}
+
+.about .flex .flex-box:hover {
+    background-color: white;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+.about .flex .flex-box h1 {
+    line-height: 40px;
+}
+
+.about .flex .flex-box h2 {
+    margin-bottom: 10px;
+}
+
+.about .flex .flex-box .start {
+    color: var(--main-color);
+    margin: 20px 0px 0px 0px;
+    background: var(--white-color);
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 40px;
+    font-weight: bolder;
+}
+
+.about .flex .flex-box .start:hover {
+    background: var(--main-color);
+    color: white;
+}
+
+/* About ends */
+
+
+/* Contact Starts */
+.package {
+    background: var(--main-color);
+    padding: 20px 0px;
+}
+
+.package .pack {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.package .pack .pack-flex {
+    color: var(--white-color);
+}
+
+.package .pack .pack-flex button {
+    color: var(--main-color);
+    background: var(--white-color);
+    padding: 20px 20px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.package .pack .pack-flex button:hover {
+    background: var(--main-color);
+    color: white;
+}
+
+/* Contact ends  */
+
+
+
+/* footer starts */
+footer {
+    background: black;
+    color: white;
+    padding: 10px 0px;
+}
+
+footer .foot {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .foot .foot-flex a {
+    text-decoration: none;
+}
+
+footer .foot .foot-flex a i {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+footer .foot .foot-flex a i:hover {
+    color: var(--main-color);
+}
+
+/* footer ends */
