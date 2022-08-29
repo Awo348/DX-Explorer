@@ -49,11 +49,12 @@ header {
 /* =============== */
 .nav-mobile {
     display: none;
-    /* position: fixed; */
+    position: fixed;
     background: var(--main-color);
     justify-content: space-between;
     padding: 20px 30px 20px 15px;
     align-items: center;
+    width: 100%;
 }
 
 .nav-mobile__brand {
@@ -108,13 +109,13 @@ header {
 
 .show .menubars::before {
     transform: rotate(45deg);
-    background: var(--main-color);
+    background: var(--white-color);
 
 }
 
 .show .menubars::after {
     transform: rotate(-45deg);
-    background: var(--main-color);
+    background: var(--white-color);
 
 }
 
@@ -125,7 +126,7 @@ header {
     position: fixed;
     background: var(--main-color);
     right: 0;
-    top: 0;
+    top: 75px;
     /* padding-left: 15px; */
 }
 
@@ -240,7 +241,7 @@ header {
     font-weight: 500;
     color: var(--white-color);
     border-radius: 50px;
-    animation: bouncingbutton 3s infinite alternate;
+    
 }
 
 .contain .text .btn:hover {
